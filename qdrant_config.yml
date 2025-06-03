@@ -1,0 +1,8 @@
+performance:
+  max_search_threads: 8      # Número de hilos para búsquedas
+  update_rate_limit: 5000000 # Límite de 1MB/s para actualizaciones
+storage:
+  memmap_threshold_kb: 200000  # Usar memoria mapeada para vectores >200MB
+log_level: INFO
+service:
+  api_key: "api_key"  # Clave API para el servicio

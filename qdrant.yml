@@ -1,0 +1,20 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    restart: always
+    container_name: qdrant
+    ports:
+      - 6333:6333
+      - 6334:6334
+      - 6335:6335
+    networks:
+      - agents-net
+    volumes:
+      - /install/qdrant/qdrant_data:/qdrant/storage
+      - /install/qdrant/qdrant_config.yaml:/qdrant/config/production.yaml
+volumes:
+  qdrant_data:
+    driver: local
+networks:
+  agents-net:
+    external: true
